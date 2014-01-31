@@ -20,5 +20,10 @@ module FirstApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    # [deprecated] I18n.enforce_available_locales will default to true in the future. 
+    # If you really want to skip validation of your locale you can set 
+    # I18n.enforce_available_locales = false to avoid this message.
+    I18n.enforce_available_locales = true
   end
 end
